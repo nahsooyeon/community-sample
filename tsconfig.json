@@ -31,6 +31,6 @@
       "@/store/*": ["src/store/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.js", "public", "tailwind.config.js"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.js", "public", "tailwind.config.js"],
+  "exclude": ["./node_modules"]
 }
