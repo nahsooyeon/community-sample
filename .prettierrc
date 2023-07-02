@@ -1,0 +1,16 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "semi": true,
+  "endOfLine": "lf",
+  "useTabs": false,
+  "tabWidth": 2,
+  "htmlWhitespaceSensitivity": "strict",
+  "trailingComma": "all",
+  "quoteProps": "as-needed",
+  "printWidth": 120,
+  "arrowParens": "always",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "pluginSearchDirs": [],
+  "tailwindConfig": "tailwind.config.js"
+}
