@@ -1,0 +1,14 @@
+# .editorconfig
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 120
+
+# Prettier는 `singleQuote`가 false이므로, 작은따옴표와 큰따옴표에 관한 규칙은 명시하지 않습니다.
+# `semi`는 true이므로, 세미콜론에 관한 규칙은 명시하지 않습니다.

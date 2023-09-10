@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,47 +14,21 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/client/*": [
-        "src/client/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/icons": [
-        "src/icons/index.tsx"
-      ],
-      "@/lib/*": [
-        "src/lib/*"
-      ],
-      "@/pages": [
-        "src/pages/index.tsx"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/svgs": [
-        "src/svgs/index.tsx"
-      ],
-      "@/styles/*": [
-        "src/styles/*"
-      ],
-      "@/store/*": [
-        "src/store/*"
-      ]
+      "@/client/*": ["client/*"],
+      "@/components/*": ["components/*"],
+      "@/data/*": ["data/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/icons": ["icons/index.tsx"],
+      "@/lib/*": ["lib/*"],
+      "@/pages": ["pages/index.page.tsx"],
+      "@/pages/*": ["pages/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"],
+      "@/svgs": ["svgs/index.tsx"],
+      "@/styles/*": ["styles/*"],
+      "@/store/*": ["store/*"]
     },
     "plugins": [
       {
@@ -67,7 +37,7 @@
     ]
   },
   "include": [
-    "./src/**/*",
+    "**/*",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
@@ -76,7 +46,5 @@
     "tailwind.config.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "./node_modules"
-  ]
+  "exclude": ["node_modules", ".gitignore", ".prettierrc", "yarn.lock", "README.md"]
 }
