@@ -2,8 +2,6 @@ name: Build Next.js Project
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   build:
