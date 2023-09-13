@@ -10,7 +10,7 @@
     "code-check:lint": "eslint src",
     "code-check:type": "tsc --noEmit",
     "code-format:fix": "eslint src --fix",
-    "code-format:prettier": "prettier --write src ./*.js",
+    "code-format:prettier": "prettier --write src ./*.tsx",
     "eslint": "eslint \"**/*.tsx\" --fix"
   },
   "dependencies": {
@@ -41,10 +41,23 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.12.0",
     "eslint-plugin-unicorn": "^48.0.1",
+    "lint-staged": "^14.0.1",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "typescript": "5.0.4",
     "yarn": "^1.22.19"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
