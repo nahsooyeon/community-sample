@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { NextPageWithLayout } from "@/types/pageLayoutType";
 import { usePostLogin } from "apis";
 import { LoginReqDTO } from "dto";
-import { SharedInput, SharedPageLayout } from "@/components/index";
+import { SharedButton, SharedInput, SharedPageLayout } from "@/components/index";
 
 const LoginPage: NextPageWithLayout = () => {
   const { register, handleSubmit, watch, formState, reset } = useForm<LoginReqDTO>({
@@ -54,7 +54,7 @@ const LoginPage: NextPageWithLayout = () => {
               minLength: 1,
             })}
           />
-          <button type="submit">로그인</button>
+          <SharedButton action="submit" text="로그인" size={["medium", "auto"]} theme={"PINK"} />
         </form>
       </div>
     </SharedPageLayout>
