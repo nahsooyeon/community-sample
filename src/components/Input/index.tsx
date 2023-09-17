@@ -18,9 +18,9 @@ export const SharedInput: FunctionComponent<SharedInputProps> = (props) => {
     : null;
 
   const width = {
-    small: "w-40",
-    medium: "w-52",
-    large: "w-60",
+    small: "w-120",
+    medium: "w-240",
+    large: "w-320",
   }[props.size[1]];
 
   const height = {
@@ -31,10 +31,10 @@ export const SharedInput: FunctionComponent<SharedInputProps> = (props) => {
 
   return (
     <div className="relative">
-      {props.label && <p>{props.label}</p>}
+      {props.label && <p className="text-14 text-GREY_70">{props.label}</p>}
       <div className="relative">
         <input
-          className={cls(width, height, "px-12 py-14")}
+          className={cls(width, height, "rounded-8 border border-GREY_30 px-12 py-14")}
           type={props.type}
           placeholder={props.placeholder}
           {...props.registerObj}

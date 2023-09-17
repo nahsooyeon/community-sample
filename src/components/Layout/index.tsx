@@ -5,7 +5,7 @@ interface SharedPageLayoutProps {
 }
 
 export const SharedPageLayout: FunctionComponent<SharedPageLayoutProps> = (props) => (
-  <div className="flex justify-center">
-    <div>{props.children}</div>
+  <div className="flex">
+    <div className="flex justify-center">{props.children}</div>
   </div>
 );
