@@ -1,8 +1,9 @@
+import { NextPageWithLayout } from "@/types/pageLayoutType";
 import { usePostLogin } from "apis";
 import { LoginReqDTO } from "dto";
 import { SubmitHandler, useForm } from "react-hook-form";
 
-const LoginPage = () => {
+const LoginPage: NextPageWithLayout = () => {
   const { register, handleSubmit, watch, formState, reset } = useForm<LoginReqDTO>({
     mode: "all",
     reValidateMode: "onChange",
@@ -60,4 +61,5 @@ const LoginPage = () => {
   );
 };
 
+LoginPage.getLayout = (page) => <>{page}</>;
 export default LoginPage;
