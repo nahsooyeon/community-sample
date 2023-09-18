@@ -3,7 +3,7 @@ name: Build Next.js Project
 on: [push, pull_request]
 
 jobs:
-  nestjs-build:
+  nextjs-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
