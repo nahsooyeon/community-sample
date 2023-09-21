@@ -1,4 +1,4 @@
-import axios, { AxiosError, isAxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 
 const instance = axios.create({
   baseURL: "localhost:4000",
@@ -8,7 +8,7 @@ const instance = axios.create({
 const createInstance = () => {
   instance.interceptors.response.use(
     (response) => response,
-    async (error: AxiosError) => (isAxiosError(error) ? Promise.reject(error) : Promise.reject(error))
+    async (error: AxiosError) => Promise.reject(error)
   );
   return instance;
 };
