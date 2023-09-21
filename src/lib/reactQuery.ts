@@ -10,8 +10,8 @@ const queryClient = new QueryClient({
     },
   },
   queryCache: new QueryCache({
-    onError: () => {
-      checkRefreshIssued();
+    onError: async () => {
+      await checkRefreshIssued();
     },
   }),
 });

@@ -8,7 +8,7 @@ const instance = axios.create({
 const createInstance = () => {
   instance.interceptors.response.use(
     (response) => response,
-    (error: AxiosError) => (isAxiosError(error) ? Promise.reject(error) : Promise.reject(error))
+    async (error: AxiosError) => (isAxiosError(error) ? Promise.reject(error) : Promise.reject(error))
   );
   return instance;
 };

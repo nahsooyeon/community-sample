@@ -2,6 +2,7 @@ module.exports = {
   parserOptions: {
     project: ["tsconfig.json"],
   },
+  parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint/eslint-plugin", "prettier", "unicorn"],
   extends: [
     "plugin:@typescript-eslint/recommended",
@@ -21,6 +22,20 @@ module.exports = {
   },
   ignorePatterns: [".eslintrc.js", "docker/*", "**/*.spec.ts", "dist/*", "node_modules/*", "test/*", ".next/*"],
   rules: {
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        checksConditionals: true,
+        checksVoidReturn: false,
+      },
+    ],
+    "@typescript-eslint/no-floating-promises": ["error", { ignoreVoid: true, ignoreIIFE: true }],
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/await-thenable": "error",
+    "no-return-await": "off",
+    "require-await": "off",
+    "@typescript-eslint/require-await": "error",
+    "@typescript-eslint/return-await": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "unicorn/no-empty-file": "error",
