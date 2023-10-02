@@ -1,6 +1,6 @@
 import { QueryClient, QueryCache } from "@tanstack/react-query";
 
-const queryClient = new QueryClient({
+export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnMount: false,
@@ -19,5 +19,3 @@ const queryClient = new QueryClient({
 const checkRefreshIssued = async () => {
   /* JWT 갱신 에러 처리 */
 };
-
-export default queryClient;

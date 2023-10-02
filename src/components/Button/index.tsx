@@ -1,6 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
+import { cls } from "@/utils";
+
 import { ButtonSizeProps, PickedButtonAttributes } from "./type";
-import { cls } from "@/utils/tailwind";
 import { ButtonStyle } from "./style";
 
 interface SharedButtonProps extends PickedButtonAttributes {

@@ -1,10 +1,10 @@
 import { QueryClientProvider, Hydrate } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "@/styles/globals.css";
-import queryClient from "@/lib/reactQuery";
 import Head from "next/head";
-import { AppPropsWithLayout } from "@/types/pageLayoutType";
+import { AppPropsWithLayout } from "@/types";
 import { ReactElement } from "react";
+import { queryClient } from "@/lib/queryClient";
 
 export default function MyApp(props: AppPropsWithLayout) {
   const getLayout = props.Component.getLayout || ((page: ReactElement) => page);

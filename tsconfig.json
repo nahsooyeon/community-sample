@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2015",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,21 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/client/*": ["client/*"],
-      "@/components/*": ["components/*"],
-      "@/data/*": ["data/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/icons": ["icons/index.tsx"],
-      "@/lib/*": ["lib/*"],
-      "@/pages": ["pages/index.page.tsx"],
-      "@/pages/*": ["pages/*"],
-      "@/types/*": ["types/*"],
-      "@/utils/*": ["utils/*"],
-      "@/svgs": ["svgs/index.tsx"],
-      "@/styles/*": ["styles/*"],
-      "@/store/*": ["store/*"]
+      "@/*": ["src/*"]
     },
     "plugins": [
       {

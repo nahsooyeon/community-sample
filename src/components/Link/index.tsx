@@ -1,4 +1,4 @@
-import { cls } from "@/utils/tailwind";
+import { cls } from "@/utils";
 import Link from "next/link";
 import { FunctionComponent, ReactNode } from "react";
 import { LinkStyle } from "./style";

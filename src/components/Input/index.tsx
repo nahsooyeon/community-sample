@@ -1,7 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
 import { FieldValues, FormState, UseFormRegisterReturn } from "react-hook-form";
 import { InputBoxSizeType, PickedInputAttributes } from "./type";
-import { cls } from "@/utils/tailwind";
+import { cls } from "@/utils";
 
 interface SharedInputProps extends PickedInputAttributes {
   registerObj?: UseFormRegisterReturn;

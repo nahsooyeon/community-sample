@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
-import { unAuthorizedInstance } from "apis";
 import { AxiosResponse, AxiosError } from "axios";
-import { LoginReqDTO, LoginResDTO } from "dto";
+import { unAuthorizedInstance } from "@/apis";
+import { LoginReqDTO, LoginResDTO } from "@/dto";
 
 const postLogin = async (requestData: LoginReqDTO) => {
   const { data } = await unAuthorizedInstance.post("/login", requestData);

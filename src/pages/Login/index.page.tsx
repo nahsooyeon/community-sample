@@ -1,7 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { NextPageWithLayout } from "@/types/pageLayoutType";
-import { usePostLogin } from "apis";
-import { LoginReqDTO } from "dto";
+import { usePostLogin } from "@/apis";
+import { LoginReqDTO } from "@/dto";
 import { SharedButton, SharedInput, SharedPageLayout } from "@/components/index";
 
 const LoginPage: NextPageWithLayout = () => {
