@@ -1,49 +1,47 @@
 import { FunctionComponent, ReactNode } from "react";
 import { FieldValues, FormState, UseFormRegisterReturn } from "react-hook-form";
-import { InputBoxSizeType, PickedInputAttributes } from "./type";
-import { cls } from "@/utils/tailwind";
+import { PickedInputAttributes } from "./type";
+import { SizeType } from "@/styles/type";
+import {
+  cssObj,
+  errorTextContainer,
+  relativeContainer,
+  errorTextStyle,
+  labelBase,
+  labelVariants,
+  inputBase,
+  inputVariants,
+} from "./style.css";
 
 interface SharedInputProps extends PickedInputAttributes {
-  registerObj?: UseFormRegisterReturn;
-  size: InputBoxSizeType;
-  formState?: FormState<FieldValues>;
+  registerObj: UseFormRegisterReturn;
+  size: SizeType;
+  formState: FormState<FieldValues>;
   label?: string;
   children?: ReactNode;
 }
 
 export const SharedInput: FunctionComponent<SharedInputProps> = (props) => {
-  const errorMessage = props.registerObj
-    ? props.formState?.errors[props.registerObj.name] &&
-      (props.formState?.errors[props.registerObj.name]?.message as string)
-    : null;
+  const errorMessage =
+    props.formState.errors[props.registerObj.name] &&
+    (props.formState.errors[props.registerObj.name]?.message as string);
 
-  const width = {
-    small: "w-120",
-    medium: "w-240",
-    large: "w-320",
-  }[props.size[1]];
-
-  const height = {
-    small: "h-36",
-    medium: "h-40",
-    large: "h-46",
-  }[props.size[0]];
+  const isDirty = props.formState.dirtyFields[props.registerObj.name];
+  const status = errorMessage ? "error" : isDirty && !errorMessage ? "success" : "primary";
 
   return (
-    <div className="relative">
-      {props.label && <p className="text-14 text-GREY_70">{props.label}</p>}
-      <div className="relative">
+    <div className={relativeContainer}>
+      {props.label && <p className={`${labelBase} ${labelVariants[status]}`}>{props.label}</p>}
+      <div className={relativeContainer}>
         <input
-          className={cls(width, height, "rounded-8 border border-GREY_30 px-12 py-14")}
+          className={`${inputBase} ${inputVariants[status]}`}
           type={props.type}
           placeholder={props.placeholder}
           {...props.registerObj}
         />
-        {props.children && (
-          <div className="absolute right-14 top-[50%] flex items-center text-20">{props.children}</div>
-        )}
+        {props.children && <div className={cssObj.childrenWrapper}>{props.children}</div>}
       </div>
-      <div className="h-12">{errorMessage && <p className="text-12">{errorMessage}</p>}</div>
+      <div className={errorTextContainer}>{errorMessage && <p className={errorTextStyle}>{errorMessage}</p>}</div>
     </div>
   );
 };

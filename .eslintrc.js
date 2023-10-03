@@ -18,7 +18,16 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: [".eslintrc.js", "docker/*", "**/*.spec.ts", "dist/*", "node_modules/*", "test/*", ".next/*"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "docker/*",
+    "**/*.spec.ts",
+    "dist/*",
+    "node_modules/*",
+    "test/*",
+    ".next/*",
+    "**/*.css.ts",
+  ],
   rules: {
     "@typescript-eslint/no-misused-promises": [
       "error",

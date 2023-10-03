@@ -1,0 +1,48 @@
+export const PALETTE = {
+  TEXT: {
+    PRIMARY: "#000000DE",
+    SECONDARY: "#00000099",
+    DISABLED: "#00000061",
+  },
+  PRIMARY: {
+    MAIN: "#2196F3",
+    LIGHT: "#42A5F5",
+    DARK: "#1E88E5",
+    FOCUS: "#2196F31F",
+    HOVER: "#2196F30A",
+    FOCUS_VISIBLE: "#2196F34D",
+    BORDER: "#2196F380",
+    SELECTED: "#2196F314",
+  },
+  SECONDARY: {
+    MAIN: "#9C27B0",
+    DARK: "#7B1FA2",
+    LIGHT: "#BA68C8",
+  },
+  ERROR: {
+    MAIN: "#D32F2F",
+    DARK: "#C62828",
+    LIGHT: "#EF5350",
+  },
+  WARNING: {
+    MAIN: "#ED6C02",
+    DARK: "#E65100",
+    LIGHT: "#FF9800",
+  },
+  INFO: {
+    MAIN: "#0288D1",
+    DARK: "#01579B",
+    LIGHT: "#03A9F4",
+  },
+  SUCCESS: { MAIN: "#2E7D32", DARK: "#1B5E20", LIGHT: "#4CAF50" },
+  DIVIDER: "#0000001F",
+  ALERT: {
+    INFO_CONTENT: "#014361",
+    INFO_FILL: "#E5F6FD",
+  },
+  CONTRAST: "#FFFFFF",
+  INPUT: {
+    ENABLED_BORDER: "#0000006B",
+    HOVERED_BORDER: "#000000",
+  },
+};

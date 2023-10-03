@@ -34,7 +34,7 @@ const LoginPage: NextPageWithLayout = () => {
         <form className="flex flex-col items-center gap-1.5" onSubmit={handleSubmit(submitHandler)}>
           <SharedInput
             label="아이디"
-            size={["medium", "medium"]}
+            size={"large"}
             registerObj={register("name", {
               required: "아이디를 입력해주세요.",
               minLength: 1,
@@ -47,14 +47,14 @@ const LoginPage: NextPageWithLayout = () => {
             label="비밀번호"
             type="password"
             placeholder="비밀번호"
-            size={["medium", "medium"]}
+            size={"large"}
             formState={formState}
             registerObj={register("password", {
               required: "비밀번호를 입력해주세요.",
               minLength: 1,
             })}
           />
-          <SharedButton action="submit" text="로그인" size={["medium", "auto"]} theme={"PINK"} />
+          <SharedButton action="submit" text="로그인" size="large" theme="primary" />
         </form>
       </div>
     </SharedPageLayout>

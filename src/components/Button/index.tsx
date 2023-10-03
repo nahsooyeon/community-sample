@@ -1,15 +1,16 @@
 import { FunctionComponent, ReactNode } from "react";
-import { ButtonSizeProps, PickedButtonAttributes } from "./type";
-import { cls } from "@/utils/tailwind";
-import { ButtonStyle } from "./style";
+import { PickedButtonAttributes } from "./type";
+import { SizeType, StatusType } from "@/styles/type";
+import { cssObj } from "@/components/Button/style.css";
+import { SizeVariant } from "@/styles/size.css";
 
 interface SharedButtonProps extends PickedButtonAttributes {
-  size: ButtonSizeProps;
+  size: SizeType;
   label?: string;
   icon?: ReactNode;
   children?: ReactNode;
   text: string;
-  theme: "PINK" | "GREY";
+  theme: StatusType;
   action: "submit" | (() => void);
 }
 
@@ -20,27 +21,15 @@ export const SharedButton: FunctionComponent<SharedButtonProps> = (props) => {
       : () => {
           if (props.action !== "submit") props.action();
         };
-  const width = {
-    small: "w-78",
-    medium: "w-110",
-    large: "w-125",
-    auto: "fill-available",
-  }[props.size[1]];
-
-  const height = {
-    small: "h-20",
-    medium: "h-40",
-    large: "h-44",
-  }[props.size[0]];
 
   return (
     <button
-      className={cls(width, height, "rounded-8 px-14 py-8 text-WHITE", ButtonStyle[props.theme])}
+      className={`${cssObj[props.theme]} ${SizeVariant[props.size]}`}
       disabled={props.disabled}
       type={props.action === "submit" ? "submit" : "button"}
       onClick={onClickAction}
     >
-      {props.icon && <div className="mr-10 flex items-center justify-center text-18">{props.icon}</div>}
+      {props.icon && <div className="">{props.icon}</div>}
       {props.text}
     </button>
   );
