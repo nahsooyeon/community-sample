@@ -40,6 +40,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "unicorn/no-empty-file": "error",
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
+
     "react/require-default-props": "off",
     "react-hooks/exhaustive-deps": "error",
     "react/jsx-props-no-spreading": "off",
@@ -82,7 +83,7 @@ module.exports = {
       callees: ["cls", "classnames", "clsx", "ctl"],
       classRegex: "^(class(Name)?|\\w+Style)$",
       config: "tailwind.config.js",
-      cssFiles: "./src/**/*.css",
+      cssFiles: ["./src/**/*.css"],
     },
   },
   ignorePatterns: ["next.config.js", "tailwind.config.js", "postcss.config.js"],
