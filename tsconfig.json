@@ -43,7 +43,6 @@
     "**/*.tsx",
     ".eslintrc.js",
     "public",
-    "tailwind.config.js",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

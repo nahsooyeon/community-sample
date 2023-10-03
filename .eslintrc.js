@@ -8,8 +8,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    // tailwind 관련
-    "plugin:tailwindcss/recommended",
     // prettier 관련 설정 extends는 가장 마지막에 위치해야한다.
     // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
     "next/core-web-vitals",
@@ -77,13 +75,6 @@ module.exports = {
       },
     ],
   },
-  settings: {
-    tailwindcss: {
-      callees: ["cls", "classnames", "clsx", "ctl"],
-      classRegex: "^(class(Name)?|\\w+Style)$",
-      config: "tailwind.config.js",
-      cssFiles: "./src/**/*.css",
-    },
-  },
-  ignorePatterns: ["next.config.js", "tailwind.config.js", "postcss.config.js"],
+
+  ignorePatterns: ["next.config.js"],
 };
