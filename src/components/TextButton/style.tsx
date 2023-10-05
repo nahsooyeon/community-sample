@@ -1,7 +1,7 @@
-import { ButtonStatusProps } from "./type";
+import { ComponentStatusType } from "../type";
 
 export const style: {
-  [key in ButtonStatusProps]: string;
+  [key in ComponentStatusType]: string;
 } = {
   PRIMARY: "text-PRIMARY_MAIN hover:text-PRIMARY_DARK border border-PRIMARY_OUTLINED hover:bg-PRIMARY_HOVERED",
   SECONDARY: "text-SECONDARY_MAIN hover:bg-SECONDARY_DARK",

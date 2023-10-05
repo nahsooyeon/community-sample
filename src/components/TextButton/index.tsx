@@ -1,8 +1,9 @@
 import { FunctionComponent, ReactNode } from "react";
 import { cls } from "@/utils";
 
-import { ButtonSizeProps, ButtonStatusProps, PickedButtonAttributes } from "./type";
+import { ButtonSizeProps, PickedButtonAttributes } from "./type";
 import { style } from "./style";
+import { ComponentStatusType } from "../type";
 
 interface SharedButtonProps extends PickedButtonAttributes {
   size: ButtonSizeProps;
@@ -10,7 +11,7 @@ interface SharedButtonProps extends PickedButtonAttributes {
   icon?: ReactNode;
   children?: ReactNode;
   text: string;
-  status: ButtonStatusProps;
+  status: ComponentStatusType;
   isDisabled?: boolean;
   action: "submit" | (() => void);
 }

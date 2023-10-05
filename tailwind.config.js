@@ -52,8 +52,16 @@ module.exports = {
         WARNING_MAIN: "#ED6C02",
         WARNING_DARK: "#E65100",
         WARNING_LIGHT: "#FF9800",
-        INFO: "#0288D1",
-        SUCCESS: "#2E7D32",
+
+        INFO_MAIN: "#0288D1",
+        INFO_DARK: "#01579B",
+        INFO_LIGHT: "#03A9F4",
+        INHERIT_MAIN: "#E0E0E0",
+        INHERIT_LIGHT: "#F5F5F5",
+
+        SUCCESS_MAIN: "#2E7D32",
+        SUCCESS_DARK: "#1B5E20",
+        SUCCESS_LIGHT: "#4CAF50",
       },
     },
   },

@@ -2,13 +2,13 @@ import { cls } from "@/utils";
 import Link from "next/link";
 import { FunctionComponent, ReactNode } from "react";
 import { LinkButtonStyle } from "./style";
-import { LinkStatusProps } from "./type";
+import { ComponentStatusType } from "../type";
 
 interface SharedInternalLinkProps {
   text: string;
   link: string;
   type: "button" | "link";
-  theme: LinkStatusProps;
+  theme: ComponentStatusType;
   icon?: ReactNode;
 }
 
