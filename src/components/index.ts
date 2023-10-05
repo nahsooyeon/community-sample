@@ -1,5 +1,6 @@
 export { SharedPageLayout } from "./Layout";
 export { SharedInput } from "./Input";
 export { SharedNavBar } from "./NavBar";
-export { SharedButton } from "./Button";
+export { SharedContainedButton } from "./ContainedButton";
+export { SharedTextButton } from "./TextButton";
 export { SharedInternalLink } from "./Link";

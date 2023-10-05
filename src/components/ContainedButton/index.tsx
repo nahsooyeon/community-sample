@@ -2,7 +2,8 @@ import { FunctionComponent, ReactNode } from "react";
 import { cls } from "@/utils";
 
 import { ButtonSizeProps, PickedButtonAttributes } from "./type";
-import { ButtonStyle } from "./style";
+import { style } from "./style";
+import { ComponentStatusType } from "../type";
 
 interface SharedButtonProps extends PickedButtonAttributes {
   size: ButtonSizeProps;
@@ -10,11 +11,12 @@ interface SharedButtonProps extends PickedButtonAttributes {
   icon?: ReactNode;
   children?: ReactNode;
   text: string;
-  theme: "PINK" | "GREY";
+  status: ComponentStatusType;
+  isDisabled?: boolean;
   action: "submit" | (() => void);
 }
 
-export const SharedButton: FunctionComponent<SharedButtonProps> = (props) => {
+export const SharedContainedButton: FunctionComponent<SharedButtonProps> = (props) => {
   const onClickAction =
     props.action === "submit"
       ? undefined
@@ -36,7 +38,7 @@ export const SharedButton: FunctionComponent<SharedButtonProps> = (props) => {
 
   return (
     <button
-      className={cls(width, height, "rounded-8 px-14 py-8 text-WHITE", ButtonStyle[props.theme])}
+      className={cls(width, height, style[props.status], "text-white disabled:bg-DISABLED")}
       disabled={props.disabled}
       type={props.action === "submit" ? "submit" : "button"}
       onClick={onClickAction}

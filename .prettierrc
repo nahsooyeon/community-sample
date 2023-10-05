@@ -8,5 +8,6 @@
   "arrowParens": "always",
   "plugins": ["prettier-plugin-tailwindcss"],
   "pluginSearchDirs": [],
-  "tailwindConfig": "tailwind.config.js"
+  "tailwindConfig": "tailwind.config.js",
+  "tailwindFunctions": ["cls", "style"]
 }
