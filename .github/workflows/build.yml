@@ -16,4 +16,8 @@ jobs:
           node-version: 18.x
 
       - run: pnpm install
+
+      - name: husky install
+        run: pnpm husky install
+
       - run: pnpm lint && pnpm build
