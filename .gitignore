@@ -6,3 +6,9 @@ yarn-error.log
 .pnp
 .pnp.js
 .vercel
+
+test/e2e/storageState.json
+
+playwright-report
+
+test-results
