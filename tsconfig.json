@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
+    "types": ["jest"],
     "paths": {
       "@/client/*": ["client/*"],
       "@/components/*": ["components/*"],
@@ -44,7 +45,8 @@
     ".eslintrc.js",
     "public",
     "tailwind.config.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "jest.config.js"
   ],
   "exclude": ["node_modules"]
 }
