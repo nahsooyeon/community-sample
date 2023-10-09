@@ -3,8 +3,5 @@
 
 pnpm next build
 
-# 추후에 테스트 실행
 
-
-#badges update
-pnpm istanbul-badges-readme && git add 'README.md'
+pnpm make-badges && git add 'README.md'
