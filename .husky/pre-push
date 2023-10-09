@@ -3,5 +3,11 @@
 
 pnpm next build
 
+if [ $? -ne 0 ]; then
+  echo "Build failed, commit aborted"
+  exit 1
+else
+  echo "Build succeeded, commit continues"
+  pnpm make-badges && git add 'README.md'
+fi
 
-pnpm make-badges && git add 'README.md'
