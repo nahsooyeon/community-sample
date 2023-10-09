@@ -1,6 +1,6 @@
 name: Build Next.js Project
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   nextjs-build:
@@ -16,4 +16,8 @@ jobs:
           node-version: 18.x
 
       - run: pnpm install
+
+      - name: husky install
+        run: pnpm husky install
+
       - run: pnpm lint && pnpm build

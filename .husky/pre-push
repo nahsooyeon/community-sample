@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm next build
+
+if [ $? -ne 0 ]; then
+  echo "Build failed, commit aborted"
+  exit 1
+else
+  echo "Build succeeded, commit continues"
+  pnpm make-badges && git add 'README.md'
+fi
+
