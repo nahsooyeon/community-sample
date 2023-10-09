@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm next build
+
+# 추후에 테스트 실행
+
+
+#badges update
+pnpm istanbul-badges-readme && git add 'README.md'
