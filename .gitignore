@@ -6,3 +6,6 @@ yarn-error.log
 .pnp
 .pnp.js
 .vercel
+
+# Sentry Config File
+.sentryclirc
