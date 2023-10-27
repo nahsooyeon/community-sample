@@ -7,7 +7,6 @@
 - [ ] 반응형 디자인
 
 ## 기술 스택
-
 - Next.js
 - React-Query
 - TailwindCSS
@@ -15,6 +14,7 @@
 
 ## To-Do Lists
 - [ ] Next.js 13 에서 제공하는 기능들 사용해보기
-- [ ] React 서버 컴포넌트 사용해보기
+- [ ] 스토리북 적용
+
 
 

@@ -1,0 +1,17 @@
+# .husky/pre-commit
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# PATH 추가
+PATH="./node_modules/.bin:$PATH"
+
+# 빌드 체크
+pnpm next build
+
+# 빌드가 성공적으로 완료된 경우에만 lint-staged 실행
+if [ $? -eq 0 ]; then
+    lint-staged
+else
+    echo "Build failed! Please fix the build errors before committing."
+    exit 1
+fi
