@@ -11,6 +11,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer(nextConfig);
 
+// Injected content via Sentry wizard below
+
 const { withSentryConfig } = require("@sentry/nextjs");
 
 module.exports = withSentryConfig(
@@ -21,7 +23,6 @@ module.exports = withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-
     org: "addline",
     project: "community-sample",
   },
@@ -39,7 +40,7 @@ module.exports = withSentryConfig(
     tunnelRoute: "/monitoring",
 
     // Hides source maps from generated client bundles
-    hideSourceMaps: true,
+    hideSourceMaps: false,
 
     // Automatically tree-shake Sentry logger statements to reduce bundle size
     disableLogger: true,

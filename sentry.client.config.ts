@@ -1,10 +1,12 @@
+// This file configures the initialization of Sentry on the client.
+// The config you add here will be used whenever a users loads a page in their browser.
+// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+
 import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "https://e45236a251c4d5894461d2e1854f3c07@o4506019266887681.ingest.sentry.io/4506121429123072",
 
-  // We recommend adjusting this value in production, or using `tracesSampler`
-  // for finer control
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? 0.15 : 0,
 
@@ -17,6 +19,7 @@ Sentry.init({
   // in development and sample at a lower rate in production
   replaysSessionSampleRate: process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? 0.15 : 0,
   enabled: process.env.NEXT_PUBLIC_VERCEL_ENV === "production",
+
   // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   integrations: [
     new Sentry.Replay({
@@ -25,5 +28,4 @@ Sentry.init({
       blockAllMedia: true,
     }),
   ],
-
 });
